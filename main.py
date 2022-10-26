@@ -20,5 +20,3 @@ def got_dm(client, event, logger):
 
 if __name__ == "__main__":
     SocketModeHandler(app, SOCKET_TOKEN).start()
-
-
