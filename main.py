@@ -3,10 +3,6 @@ import os
 from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
 
-from dotenv import load_dotenv
-
-load_dotenv()
-
 API_TOKEN = os.environ['API_TOKEN']
 SOCKET_TOKEN = os.environ['SOCKET_TOKEN']
 REPORT_CHANNEL = os.environ['REPORT_CHANNEL']
