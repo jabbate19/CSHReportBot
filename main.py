@@ -12,11 +12,11 @@ app = App(token=API_TOKEN)
 @app.event("message")
 def got_dm(client, event, logger):
     if event['channel_type'] == 'im':
-        client.chat_postMessage(
-            channel=REPORT_CHANNEL,
-            text=event['text']
-        )
+        if 'text' in event:
+            client.chat_postMessage(
+                channel=REPORT_CHANNEL,
+                text=event['text']
+            )
 
 if __name__ == "__main__":
     SocketModeHandler(app, SOCKET_TOKEN).start()
-
